@@ -19,12 +19,12 @@ public class PessoaDAO {
 		//Abrir Conexao//
 		Connection c = con.conectar();
 		try { 
-			String 	query = "INSERT INTO pessoa" + "(cpf,nome) VALUES (?,?);";
+			String 	query = "UPDATE pessoa SET nome = ? WHERE cpf = ?";
 			PreparedStatement stm = c.prepareStatement(query);
-			stm.setInt(1, 123);
-			stm.setString(2, "joana");
-			
+			stm.setString(1,  p.getNome());
+			stm.setString(2,  p.getNome());
 			stm.executeUpdate();
+			return true;
 		
 	}catch (SQLException e) {
 		e.printStackTrace();
@@ -49,7 +49,7 @@ public class PessoaDAO {
 		Connection c = con.conectar();
 		try { 
 			Statement stm = c.createStatement();
-			String query = "SELECT * FROM pessoa";
+			String query = "DELETE FROM PESSOA where cpf = ?";
 			ResultSet rs = stm.executeQuery(query);
 			while (rs.next()) {
 				int id = rs.getInt("id");
