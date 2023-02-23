@@ -36,7 +36,7 @@ public class PessoaDAO {
 		try {
 			String query = "UPDATE pessoa SET nome = ? WHERE cpf = ?";
 			PreparedStatement stm = conn.prepareStatement(query);
-			stm.setString(1, "Leonardo Ribeiro");
+			stm.setString(1, pessoa.getNome());
 			stm.setLong(2, pessoa.getCpf());
 			int valida = stm.executeUpdate();
 			return true;
