@@ -14,25 +14,31 @@ b. DAO: Uma organização por regras codificadas, por um programa de computador.
 c. Singleton: Tem melhor acesso nas propriedades e nos métofos de classse. 
 
 3. O que é JDBC e como ele se relaciona com bancos de dados e a programação em Java? 
+
 Resposta: JDBC é uma interface de programção de aplicação (API) do java. Realiza a transmissão como sequências para a API, tendo autorização para se conectar com o banco de dados. 
 
 4. O que significa “CRUD” e como ele se  relaciona com os quatro métodos que implementamos em nossas classes DAO?
+
 Resposta: É usada para as maneiras de operar as informações armazenada. 
 
 5. Explique brevemente e com suas palavras qual a utilidade das três classes abaixo:
 
-a. Connection: 
+a. Connection: caracteriza uma conexão ao banco de dados.
 b. PreparedStatement: Autoriza organizar a query SQL preparando a dinamicamente pelos parâmetros estabelecidos em ordem com a interrogação.
 c. Statement: Realiza a query fazendo o uso de String.  
 
 
 
 6. Considere a execução de uma query SQL no banco de dados. Se esperamos um retorno de dados do banco de dados devemos usar a classe Statement ou PreparedStatement? Justifique. (Dica: é possível usar ambas; procure a diferença técnica entre as classes.).
+
 Resposta: 
 
 
 7. Com as suas próprias palavras, diferencie SWING do WINDOWBUILDER.
-Resposta: 
+
+Resposta:
+- Swing é responsável em efetuar componetes usados para criar a interface gráfica, como os botões, textos etc.
+- Windowbuilder promove a construção de telas utilizando as principais APIs gráficas.
 
 
 
