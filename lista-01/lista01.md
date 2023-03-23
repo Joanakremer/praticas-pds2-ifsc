@@ -31,7 +31,7 @@ c. Statement: Realiza a query fazendo o uso de String.
 
 6. Considere a execução de uma query SQL no banco de dados. Se esperamos um retorno de dados do banco de dados devemos usar a classe Statement ou PreparedStatement? Justifique. (Dica: é possível usar ambas; procure a diferença técnica entre as classes.).
 
-Resposta: 
+Resposta: Deve-se usar a classe PreparedStatement, pois ela é mais segura contra ataques de injeção SQL, já que utiliza uma consulta parametrizada com os parâmetros definidos antes da execução da consulta. Além disso, ela oferece melhor desempenho para consultas repetidas, pois pode ser pré-compilada pelo driver JDBC.
 
 
 7. Com as suas próprias palavras, diferencie SWING do WINDOWBUILDER.
