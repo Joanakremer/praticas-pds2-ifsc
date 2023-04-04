@@ -40,6 +40,35 @@ Resposta:
 - Swing é responsável em efetuar componetes usados para criar a interface gráfica, como os botões, textos etc.
 - Windowbuilder promove a construção de telas utilizando as principais APIs gráficas.
 
+8. package questao08;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+public class CriaBanco {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try {
+			Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost/","root","aluno");
+			Statement stm = conexao.createStatement();
+			String WSQL = "create database if not exists joana";
+			stm.executeUpdate(WSQL);
+			WSQL = "use joana";
+			stm.executeUpdate(WSQL);
+			WSQL = "create table livro(livro_id INT PRIMARY KEY NOT NULL, nome_livro VARCHAR(50) NOT NULL, n_paginas INT NOT NULL)";
+			stm.executeUpdate(WSQL);
+			conexao.close();
+		} 
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+	}
+}
 
 
 
